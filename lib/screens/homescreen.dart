@@ -135,23 +135,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-              const Row(
-                children: [
-                  Text(
-                    "Morning ",
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    "7 AM",
-                    style: TextStyle(
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
+              const Text(
+                "Morning ",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 16),
               Container(
@@ -167,10 +156,21 @@ class HomeScreen extends StatelessWidget {
                       height: 130,
                       width: 130,
                       decoration: BoxDecoration(
-                        color: Colors.green.withOpacity(0.2),
+                        color: Colors.green.withOpacity(0.1),
                         borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(24),
                           bottomLeft: Radius.circular(24),
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(24),
+                          bottomLeft: Radius.circular(24),
+                        ),
+                        child: Image.asset(
+                          "assets/images/pill.png",
+                          height: 80,
+                          width: 80,
                         ),
                       ),
                     ),
@@ -195,7 +195,79 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: 4),
                         Container(
                           decoration: BoxDecoration(
-                            color: Colors.green.withOpacity(0.2),
+                            color: Colors.green.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: const Center(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 4),
+                              child: Text(
+                                "7 Days",
+                                style: TextStyle(),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(height: 16),
+              Container(
+                height: 130,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 130,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        color: Colors.green.withOpacity(0.1),
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(24),
+                          bottomLeft: Radius.circular(24),
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(24),
+                          bottomLeft: Radius.circular(24),
+                        ),
+                        child: Image.asset(
+                          "assets/images/pill2.png",
+                          height: 80,
+                          width: 80,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 24),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Omega 2",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                          ),
+                        ),
+                        const Text(
+                          "1 tablet before meal",
+                          style: TextStyle(
+                            color: Colors.black45,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.green.withOpacity(0.1),
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: const Center(
