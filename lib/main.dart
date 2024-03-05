@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pill_reminder/screens/homescreen.dart';
+import 'package:pill_reminder/screens/home/homescreen/homescreen.dart';
 
 void main() {
   runApp(const MyApp());
