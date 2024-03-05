@@ -168,39 +168,39 @@ class HomeScreen extends StatelessWidget {
                       width: 130,
                       decoration: BoxDecoration(
                         color: Colors.green.withOpacity(0.2),
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(24),
                           bottomLeft: Radius.circular(24),
                         ),
                       ),
                     ),
-                    SizedBox(width: 24),
+                    const SizedBox(width: 24),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Omega 3",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 22,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "1 tablet after meal",
                           style: TextStyle(
                             color: Colors.black45,
                           ),
                         ),
-                        SizedBox(height: 4),
+                        const SizedBox(height: 4),
                         Container(
                           decoration: BoxDecoration(
                             color: Colors.green.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(4),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(
+                              padding: EdgeInsets.symmetric(
                                   horizontal: 12, vertical: 4),
                               child: Text(
                                 "7 Days",
