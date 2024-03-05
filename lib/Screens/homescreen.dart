@@ -33,9 +33,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const Spacer(),
                   IconButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateColor.resolveWith(
+                          (states) => Colors.green),
+                    ),
                     onPressed: () {},
                     icon: const Icon(
-                      CupertinoIcons.line_horizontal_3_decrease,
+                      CupertinoIcons.settings,
+                      color: Colors.white,
                     ),
                   ),
                 ],
@@ -53,61 +58,72 @@ class HomeScreen extends StatelessWidget {
                   IconButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateColor.resolveWith(
-                          (states) => Colors.amberAccent),
+                          (states) => Colors.green),
                     ),
                     onPressed: () {},
                     icon: const Icon(
                       Icons.keyboard_arrow_down_rounded,
+                      color: Colors.white,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 24),
               Container(
                 height: 150,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.02),
-                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.green.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(24),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 48),
                   child: Row(
                     children: [
                       SizedBox(
                         height: 150,
-                        child: Center(
-                          child: Text(
-                            "Your plan\nis almost done!",
-                            style: TextStyle(
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Your Daily",
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
+                            Text(
+                              "Progress!",
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green.shade700,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Stack(
                         children: [
                           SizedBox(
-                            height: 80,
-                            width: 80,
+                            height: 85,
+                            width: 85,
                             child: CircularProgressIndicator(
                               color: Colors.green,
-                              backgroundColor: Colors.black12,
+                              backgroundColor: Colors.black.withOpacity(0.05),
                               strokeWidth: 10,
                               value: 80 / 100,
-                              strokeCap: StrokeCap.round,
+                              strokeCap: StrokeCap.square,
                             ),
                           ),
-                          Positioned.fill(
+                          const Positioned.fill(
                             child: Center(
                               child: Text(
                                 "80%",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
-                                  color: Colors.green,
                                 ),
                               ),
                             ),
@@ -118,6 +134,25 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 16),
+              const Row(
+                children: [
+                  Text(
+                    "Morning ",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "7 AM",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
